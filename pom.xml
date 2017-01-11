@@ -1,0 +1,137 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ailk.eaap.integration</groupId>
+	<artifactId>o2p-parent-maven</artifactId>
+	<version>2.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>o2p-parent-maven</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<release.url>http://10.1.228.199:18081/nexus/content/repositories/releases/</release.url>
+		<snapshot.url>http://10.1.228.199:18081/nexus/content/repositories/snapshots/</snapshot.url>
+
+		<!-- 定义O2P产品中使用插件的属性定义 -->
+		<jdk.version>1.7</jdk.version>
+		<maven.version>3.0.4</maven.version>
+		<surefire-junit47.version>2.12.4</surefire-junit47.version>
+		<org.springframework.spring-jms.version>4.0.0.RELEASE</org.springframework.spring-jms.version>
+		<org.springframework.spring-web.version>4.1.7.RELEASE</org.springframework.spring-web.version>
+		<org.springframework.spring-jdbc.version>4.0.0.RELEASE</org.springframework.spring-jdbc.version>
+		<org.springframework.spring-test.version>4.0.0.RELEASE</org.springframework.spring-test.version>
+		<org.springframework.spring-orm.version>4.0.0.RELEASE</org.springframework.spring-orm.version>
+		<org.springframework.spring-context.version>4.1.7.RELEASE</org.springframework.spring-context.version>
+		<org.springframework.spring-core.version>4.1.7.RELEASE</org.springframework.spring-core.version>
+		<org.springframework.spring-aop.version>4.1.7.RELEASE</org.springframework.spring-aop.version>
+		<org.springframework.spring-beans.version>4.1.7.RELEASE</org.springframework.spring-beans.version>
+		<org.springframework.spring-support.version>2.0.8</org.springframework.spring-support.version>
+
+	</properties>
+
+	<!-- 配置远程发布到私服，mvn deploy -->
+	<distributionManagement>
+		<repository>
+			<id>o2p-snapshots</id>
+			<name>O2P Snapshot Repository</name>
+			<url>${snapshot.url}</url>
+			<uniqueVersion>false</uniqueVersion>
+		</repository><!-- 
+		<repository>
+			<id>releases</id>
+			<name>O2P Release Repository</name>
+			<url>${release.url}</url>
+		</repository> -->
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>${org.springframework.spring-jms.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework.spring-web.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework.spring-jdbc.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework.spring-test.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework.spring-orm.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.spring-aop.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${org.springframework.spring-core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.spring-context.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${org.springframework.spring-beans.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-support</artifactId>
+			<version>${org.springframework.spring-support.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>rest</groupId>
+			<artifactId>org.restlet</artifactId>
+			<version>0.0.0</version>
+		</dependency>
+	</dependencies>
+</project>
